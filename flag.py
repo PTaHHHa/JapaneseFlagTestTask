@@ -4,8 +4,8 @@ import argparse
 def flag(N):
     if N % 2 == 0:
 
-        for i in range(2, N, 2):
-            x = i // 2 - 1
+        for number in range(2, N, 2):
+            x = number // 2 - 1
             y = x + 1
 
         border = '#' * (3 * N + 2)
@@ -26,5 +26,5 @@ def flag(N):
         raise argparse.ArgumentError(None, "The N you've entered is not even")
 
 
-i = input("Input N: ")
-flag(int(i))
+user_input = input("Input N: ")
+flag(int(user_input))
