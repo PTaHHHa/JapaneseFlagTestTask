@@ -5,15 +5,14 @@ def flag(N):
     if N % 2 == 0:
 
         for number in range(2, N, 2):
-            x = number // 2 - 1
-            y = x + 1
+            x = number // 2
 
         border = '#' * (3 * N + 2)
         blank = "#" + (' ' * (3 * N)) + '#'
         if N == 2:
             asterisk_line = "#" + (' ' * int(N)) + ('*' * 2) + (' ' * int(N)) + "#"
         else:
-            asterisk_line = "#" + (' ' * int(N + y)) + ('*' * 2) + (' ' * int(N + y)) + "#"
+            asterisk_line = "#" + (' ' * int(N + x)) + ('*' * 2) + (' ' * int(N + x)) + "#"
         ascii_line = "#" + (' ' * N) + "*" + ('o' * int(N - 2)) + "*" + (' ' * N) + "#"
         print('{}{}{}{}{}{}{}'.format(border + '\n',
                                       (blank + '\n') * int(N / 2),
